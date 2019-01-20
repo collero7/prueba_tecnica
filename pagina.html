@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Peliculas</title>
+	<style type="text/css">
+		@import url(estilos.css);
+	</style>
+	<script src="funciones.js"></script>
+	<script src="script_pagina.js"></script>
+</head>
+<body>
+	<div>
+		<nav>
+			<ul>  
+				<script>
+					document.write("<li><a title=inicio href=pagina.html?usuario=" + obtenerUsuarioURL() + ">Inicio</a></li>");//Pasamos por la URL el usuario actual.
+					document.write("<li><a title=favoritos href=favoritos.html?usuario=" + obtenerUsuarioURL() + ">Mis favoritos</a></li>");
+				</script>
+				<li id="salir"><a title="salir" href="index.html">Salir</a></li>			
+			</ul>
+		</nav>
+	</div>
+	<div class="container">
+		<form name="formu" onsubmit="return verificarBusquedaPelicula()" action="busqueda.html">
+			<div>
+	  			<input type="text" name="usuario" class="ocultos" id="usuario"/>
+	  		</div>
+			<div id="divBuscar">
+	   		 	<input type="text" name="buscar" id="buscar"/>
+	   		 	<input type="submit" value="Buscar" id="botonBuscar"/>
+	  		</div>
+		</form>
+		<table>
+			<tr>
+				<td>
+					<img id="ima1" src="" alt="" class="src">
+					<hr>
+					<script>
+						document.write("<button class=pagina onClick=location.href='detalle.html?usuario=" + obtenerUsuarioURL() + "&detalle=" + encodeURI(peliculasIndex(0)) + "'>Ver descripción</button>");
+						
+					</script>
+				</td>
+				<td>
+					<img id="ima2" src="" alt="" class="src">
+					<hr>
+					<script>
+						document.write("<button class=pagina onClick=location.href='detalle.html?usuario=" + obtenerUsuarioURL() + "&detalle=" + encodeURI(peliculasIndex(1)) + "'>Ver descripción</button>");
+					</script>
+				</td>
+				<td>
+					<img id="ima3" src="" alt="" class="src">
+					<hr>
+					<script>
+						document.write("<button class=pagina onClick=location.href='detalle.html?usuario=" + obtenerUsuarioURL() + "&detalle=" + encodeURI(peliculasIndex(2)) + "'>Ver descripción</button>");
+					</script>
+				</td>
+				<td>
+					<img id="ima4" src="" alt="" class="src">
+					<hr>
+					<script>
+						document.write("<button class=pagina onClick=location.href='detalle.html?usuario=" + obtenerUsuarioURL() + "&detalle=" + encodeURI(peliculasIndex(3)) + "'>Ver descripción</button>");
+					</script>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img id="ima5" src="" alt="" class="src">
+					<hr>
+					<script>
+						document.write("<button class=pagina onClick=location.href='detalle.html?usuario=" + obtenerUsuarioURL() + "&detalle=" + encodeURI(peliculasIndex(4)) + "'>Ver descripción</button>");
+					</script>
+				</td>
+				<td>
+					<img id="ima6" src="" alt="" class="src">
+					<hr>
+					<script>
+						document.write("<button class=pagina onClick=location.href='detalle.html?usuario=" + obtenerUsuarioURL() + "&detalle=" + encodeURI(peliculasIndex(5)) + "'>Ver descripción</button>");
+					</script>
+				</td>
+				<td>
+					<img id="ima7" src="" alt="" class="src">
+					<hr>
+					<script>
+						document.write("<button class=pagina onClick=location.href='detalle.html?usuario=" + obtenerUsuarioURL() + "&detalle=" + encodeURI(peliculasIndex(6)) + "'>Ver descripción</button>");
+					</script>
+				</td>
+				<td>
+					<img id="ima8" src="" alt="" class="src">
+					<hr>
+					<script>
+						document.write("<button class=pagina onClick=location.href='detalle.html?usuario=" + obtenerUsuarioURL() + "&detalle=" + encodeURI(peliculasIndex(7)) + "'>Ver descripción</button>");
+					</script>
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

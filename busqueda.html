@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Peliculas</title>
+	<style type="text/css">
+		@import url(estilos.css);
+	</style>
+	<script src="funciones.js"></script>
+	<script src="script_busqueda.js"></script>
+</head>
+<body>
+	<div>
+		<nav>
+			<ul>  
+				<script>
+					document.write("<li><a title=inicio href=pagina.html?usuario=" + obtenerUsuarioURL() + ">Inicio</a></li>");//Pasamos por la URL el usuario actual.
+					document.write("<li><a title=favoritos href=favoritos.html?usuario=" + obtenerUsuarioURL() + ">Mis favoritos</a></li>");
+				</script>
+				<li id="salir"><a title="salir" href="index.html">Salir</a></li>	
+			</ul>
+		</nav>
+	</div>
+	<div class="container">
+<script>
+	for(var i = 0; i < 10; i++){
+		document.write("<table>");
+		document.write("<tr>");
+		document.write("<td>");
+		document.write("<img id=imagen" + i + " src= class=src>");
+		document.write("<hr>");
+		document.write("</td>");
+		document.write("</tr>");
+		document.write("</table>");
+		document.write("<table>");
+		document.write("<tr>");
+		document.write("<td><p><b>Titulo: <b></p></td>");
+		document.write("<td><p id=titulo" + i + "></td>");
+		document.write("</tr>");
+		document.write("<tr>");
+		document.write("<td><p><b>Año: <b></p></td>");
+		document.write("<td><p id=anio" + i + "></td>");
+		document.write("</tr>");
+		document.write("<tr>");
+		document.write("<td><p><b>Categoria: <b></p></td>");
+		document.write("<td><p id=clasi" + i + "></td>");
+		document.write("</tr>");
+		document.write("<tr>");
+		document.write("<td>");
+		document.write("<button id=fav class=fav onClick=gestionFavorito(" + i + ");>Añadir a favoritos</button>");
+		document.write("</td>");
+		document.write("<td>");
+		document.write("<button class=fav id=boton" + i + ">Ver descripción</button>");
+		document.write("</td>");
+		document.write("</tr>");
+		document.write("</table>");
+		document.write("<br>");
+		document.write("<hr>");
+		document.write("<br>");
+	}
+</script>		
+		<table>
+			<tr>
+				<td>
+					<button id="anterior" class="fav" onClick="mostrarBusqueda(pagina-=1);">Anterior</button>
+					<button id="siguiente" class="fav" onClick="mostrarBusqueda(pagina+=1);">Siguiente</button>
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

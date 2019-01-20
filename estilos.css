@@ -1,0 +1,191 @@
+.index form {
+    /* Sólo para centrar el formulario a la página */
+    margin: 0 50px;
+    width: 550px;
+    /* Para ver el borde del formulario */
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+	background: #F2E0F7;
+}
+
+.index div { 
+	margin-top: 1em; 
+}
+
+.index label {
+	/* Para asegurarse que todos los labels tienen el mismo tamaño y están alineados correctamente */
+	display: inline-block;
+	width: 130px;
+	text-align: right;
+	font-weight: bold;
+}  
+
+.index input:focus {
+	/* Para dar un pequeño destaque en elementos activos*/
+	border-color: #000;
+}
+
+.index input {border: 1px solid #999;}	
+
+.index .boton { 
+	width: 70px;
+	height: 25px;
+	display: inline-block;
+}
+
+#botonAcceso {
+	margin-left: 60px;
+	margin-right: 5px;
+}
+
+.index h1, h3 {
+	margin-left: 50px;
+}
+	 
+/* Declaración de estilo para cuando se produce un error de validación en el formulario */
+.index .error {
+	display: inline; 
+	width:300px; 
+	color: red; 
+	font-weight: bold;
+}
+
+.container{
+	text-align: center;
+	margin: 0 auto;
+	font-weight: 300;
+	margin-top: 30px;
+}
+
+.container h3 {
+	font-weight: normal;
+	color: red;
+	text-decoration: underline;
+}
+
+img {
+	border: 2px solid black;
+	border-radius: 20px;
+	opacity: 0.8;
+	transition: 0.25s ease-in-out;
+	height: 370px;
+	width: 250px;
+}
+
+img:hover{
+	opacity: 1;
+}
+
+button {
+	cursor: pointer;
+	transition: 0.25s ease-in-out;
+	width: 300px;
+	height: 50px;
+	font-size: 20px;
+	color: white;
+	background-color: gray;
+	border-radius: 20px;
+	outline: none;
+}
+.pagina {
+	margin-bottom: 100px;
+}
+
+.fav {
+	cursor: pointer;
+	transition: 0.25s ease-in-out;
+	width: 150px;
+	height: 30px;
+	font-size: 15px;
+	color: white;
+	background-color: gray;
+	border-radius: 20px;
+	outline: none;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+#salir{
+	float: right;
+}
+
+table{
+	margin-left: 18%;
+}
+
+#desc{
+	margin-top: 60px;
+	visibility: hidden;
+	text-align: left;
+}
+
+#divBuscar{
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+
+#botonBuscar{
+	cursor: pointer;
+	transition: 0.25s ease-in-out;
+	width: 130px;
+	height: 30px;
+	font-size: 14px;
+	color: white;
+	background-color: gray;
+	border-radius: 20px;
+	outline: none;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+#botonBuscar:hover, .fav:hover, button:hover{
+	background-color: purple;
+}
+
+#buscar{
+	width: 330px;
+	height: 20px;
+}
+
+.ocultos{
+	visibility: hidden;	
+}
+
+nav { /* Aplicamos estilos al menu en barra */
+	overflow: hidden;
+	padding: 7px;
+	width: 99%;
+	height: 40px;
+	background: gray; 
+}
+
+nav ul { /* Aplicamos estilos a la lista del menu en barra */
+	list-style: none;
+	margin: 0 10px;
+}
+
+nav ul li { /* Aplicamos estilos a la lista del menu en barra */
+	float: left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	margin-right: 10px;
+	width: 120px;
+	text-align: center;
+	border-radius: 20px;
+}
+
+nav ul li a { /* Aplicamos estilos a la lista del menu en barra cuando hacemos click en alguno de los elementos*/
+	color: white;
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+	transition: 0.4s linear all;	
+}
+
+nav ul li:hover { /* Aplicamos estilos a la lista del menu en barra cuando colocamos el ratón encima de un elemento de la lista */
+	background: #800080;
+	box-shadow: 1px -1px 0px #999;
+	border: 1px solid #E3E3E3;
+}
