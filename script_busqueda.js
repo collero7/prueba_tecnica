@@ -13,7 +13,7 @@ function mostrarBusqueda(pag){
 
     window.scroll(0, 0); //Metodo para volver a la parte superior de la página
 
-    xhr.open('GET', 'http://www.omdbapi.com/?s=' + encodeURI(peliculaURL[1]) + '&page=' + pag + '&apikey=f1480960', true);
+    xhr.open('GET', 'https://www.omdbapi.com/?s=' + encodeURI(peliculaURL[1]) + '&page=' + pag + '&apikey=f1480960', true);
 
     xhr.onreadystatechange = function(){
         if(xhr.readyState === 4 && xhr.status === 200){ //Listamos todo el contenido de la pelicula buscada
