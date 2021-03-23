@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Peliculas</title>
+	<style type="text/css">
+		@import url(/Prueba_JavaScript/css/estilos.css);
+	</style>
+	<script src="/Prueba_JavaScript/js/funciones.js"></script>
+	<script src="/Prueba_JavaScript/js/script_detalle.js"></script>
+</head>
+<body>
+	<div>
+		<nav>
+			<ul>  
+				<script>
+					document.write("<li><a title=inicio href=pagina.html?usuario=" + obtenerUsuarioURL() + ">Inicio</a></li>");//Pasamos por la URL el usuario actual.
+					document.write("<li><a title=favoritos href=favoritos.html?usuario=" + obtenerUsuarioURL() + ">Mis favoritos</a></li>");
+				</script>
+				<li id="salir"><a title="salir" href="/Prueba_JavaScript/index.html">Salir</a></li>			
+			</ul>
+		</nav>
+	</div>
+	<div class="container">
+		<table id="desc">
+			<tr>
+				<td><img id="ima" src="" alt="" class="src"></td>
+			</tr>			
+			<tr>
+				<td><p><b>Titulo: <b></p></td>
+				<td><p id="titulo"></td>
+			</tr>
+			<tr>
+				<td><p><b>Año: <b></p></td>
+				<td><p id="anio"></td>
+			</tr>
+			<tr>
+				<td><p><b>Categoria: <b></p></td>
+				<td><p id="clasi"></td>
+			</tr>
+			<tr>
+				<td><p><b>Genero: <b></p></td>
+				<td><p id="gene"></td>
+			</tr>
+			<tr>
+				<td><p><b>Emisión: <b></p></td>
+				<td><p id="emi"></td>
+			</tr>
+			<tr>
+				<td><p><b>Duración: <b></p></td>
+				<td><p id="dura"></td>
+			</tr>
+			<tr>
+				<td><p><b>Director: <b></p></td>
+				<td><p id="direc"></td>
+			</tr>
+			<tr>
+				<td><p><b>Autor: <b></p></td>
+				<td><p id="aut"></td>
+			</tr>
+			<tr>
+				<td><p><b>Idioma: <b></p></td>
+				<td><p id="idi"></td>
+			</tr>
+			<tr>
+				<td><p><b>Sipnosis: <b></p></td>
+				<td><p id="sipn"></td>
+			</tr>
+			<tr>
+				<td>
+					<button id="fav" class="fav" onClick="gestionFavorito();">Añadir a favoritos</button>
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

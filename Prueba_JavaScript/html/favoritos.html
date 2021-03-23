@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Peliculas</title>
+	<style type="text/css">
+		@import url(/Prueba_JavaScript/css/estilos.css);
+	</style>
+	<script src="/Prueba_JavaScript/js/funciones.js"></script>
+	<script src="/Prueba_JavaScript/js/script_favoritos.js"></script>
+</head>
+<body>
+	<div>
+		<nav>
+			<ul>  
+				<script>
+					document.write("<li><a title=inicio href=pagina.html?usuario=" + obtenerUsuarioURL() + ">Inicio</a></li>");//Pasamos por la URL el usuario actual.
+					document.write("<li><a title=favoritos href=favoritos.html?usuario="+obtenerUsuarioURL()+">Mis favoritos</a></li>");//Pasamos por la URL el usuario actual.
+				</script>
+				<li id="salir"><a title="salir" href="/Prueba_JavaScript/index.html">Salir</a></li>			
+			</ul>
+		</nav>
+	</div>
+	<div class="container">
+<script>
+	var numero = numeroFavoritos(obtenerUsuarioURL());
+	for(var i = 0; i < numero; i++){
+		document.write("<table>");
+		document.write("<tr>");
+		document.write("<td>");
+		document.write("<img id=imagen"+i+" src= class=src>");
+		document.write("<hr>");
+		document.write("</td>");
+		document.write("</tr>");
+		document.write("</table>");
+		document.write("<table>");
+		document.write("<tr>");
+		document.write("<td><p><b>Titulo: <b></p></td>");
+		document.write("<td><p id=titulo"+i+"></td>");
+		document.write("</tr>");
+		document.write("<tr>");
+		document.write("<td><p><b>Año: <b></p></td>");
+		document.write("<td><p id=anio"+i+"></td>");
+		document.write("</tr>");
+		document.write("<tr>");
+		document.write("<td><p><b>Categoria: <b></p></td>");
+		document.write("<td><p id=clasi"+i+"></td>");
+		document.write("<tr>");
+		document.write("<td><button class=fav onClick=eliminarFavorito(" + i + ");>Eliminar favorito</button></td>");
+		document.write("</tr>");
+		document.write("</tr>");
+		document.write("</table>");
+		document.write("<br>");
+		document.write("<hr>");
+		document.write("<br>");
+	}
+</script>
+	</div>
+</body>
+</html>
