@@ -172,7 +172,7 @@ function verificarBusquedaPelicula(){
     var ok;
     var xhr = new XMLHttpRequest();
 
-    xhr.open('GET', 'http://www.omdbapi.com/?t=' + encodeURI(valorBuscado) + '&apikey=f1480960', true);
+    xhr.open('GET', 'https://www.omdbapi.com/?t=' + encodeURI(valorBuscado) + '&apikey=f1480960', true);
     xhr.onreadystatechange = function(){
     
         if(xhr.readyState === 4 && xhr.status === 200){
@@ -290,7 +290,7 @@ var xhr = [];
         (function(i){
 
         xhr[i] = new XMLHttpRequest();
-        xhr[i].open('GET', 'http://www.omdbapi.com/?t=' + obtenerFavoritos()[i] + '&apikey=f1480960', true);
+        xhr[i].open('GET', 'https://www.omdbapi.com/?t=' + obtenerFavoritos()[i] + '&apikey=f1480960', true);
         xhr[i].onreadystatechange = function(){
             if(xhr[i].readyState === 4 && xhr[i].status === 200){ //Listamos todo el contenido de la pelicula buscada
                 var contenido = JSON.parse(xhr[i].responseText);
@@ -336,7 +336,7 @@ function mostrarPelicula(pelicula){
 
     var xhr = new XMLHttpRequest();
 
-    xhr.open('GET', 'http://www.omdbapi.com/?t=' + encodeURI(pelicula) + '&apikey=f1480960', true);
+    xhr.open('GET', 'https://www.omdbapi.com/?t=' + encodeURI(pelicula) + '&apikey=f1480960', true);
     xhr.onreadystatechange = function(){
 
         if(xhr.readyState === 4 && xhr.status === 200){ //Cuando sufra un cambio mostramos la información en cada campo de la tabla
