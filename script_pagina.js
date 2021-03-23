@@ -5,7 +5,7 @@ for(var i = 0; i < 8; i++){ //Listamos las películas definidas en la funcion pe
     (function(i){
 
         xhr[i] = new XMLHttpRequest();
-        xhr[i].open('GET', 'http://www.omdbapi.com/?t=' + encodeURI(peliculasIndex(i)) + '&apikey=f1480960', true);
+        xhr[i].open('GET', 'https://www.omdbapi.com/?t=' + encodeURI(peliculasIndex(i)) + '&apikey=f1480960', true);
 
         xhr[i].onreadystatechange = function(){
 
